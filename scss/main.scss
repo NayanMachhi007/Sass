@@ -1,0 +1,46 @@
+// Why we can say SCSS so base on SCSS mean we use a CSS3 that's why it's called to SCSS but older version we use SASS that mean we using CSS
+
+// 1 Operator
+// 2 Variable
+// 3 Nesting
+// 4 Mixin
+// 5 Parameter
+// 6 Partials
+
+@import "_var";
+@import "_common";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-color:$bg-purple;
+  @include d-flex;
+
+  h1 {
+    color: black;
+    @include common(2rem, uppercase);
+    &:hover {
+      color: $bg-blue;
+    }
+
+    &::after {
+      content: "hello Buddy";
+    }
+  }
+
+  p {
+    background-color: $bg-yellow;
+    @include common(1rem, lowercase);
+  }
+}

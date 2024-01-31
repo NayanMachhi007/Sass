@@ -1,0 +1,12 @@
+@mixin d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin common($letter, $txt-trans) {
+  font-size: 2rem;
+  letter-spacing: $letter;
+  text-transform: $txt-trans;
+}
